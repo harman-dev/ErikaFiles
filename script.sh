@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+mkdir -p erika-sdk/pkg/mcu/bcm/8953x/src/
+mkdir -p erika-sdk/pkg/mcu/bcm/common/src/
+mkdir -p erika-sdk/pkg/board/bcm/989530c1/src/
+mkdir -p erika-sdk/pkg/cpu/common/src/
+mkdir -p erika-sdk/pkg/cpu/cortex_rx/src/
+mkdir -p erika-sdk/pkg/cpu/cortex_mx/src/
+mkdir -p erika-sdk/pkg/kernel/oo/src/
+mkdir -p erika-sdk/contrib/bcm/utils/src/
+mkdir -p erika-sdk/contrib/bcm/drivers/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/mcu/bcm/8953x/src/bcm8953x_dmu.c           erika-sdk/pkg/mcu/bcm/8953x/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/mcu/bcm/8953x/src/bcm8953x_gnu.ld          erika-sdk/pkg/mcu/bcm/8953x/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/mcu/bcm/8953x/src/bcm8953x_info.c          erika-sdk/pkg/mcu/bcm/8953x/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/mcu/bcm/8953x/src/bcm8953x_ipc.c           erika-sdk/pkg/mcu/bcm/8953x/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/mcu/bcm/8953x/src/bcm8953x_switch.c        erika-sdk/pkg/mcu/bcm/8953x/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/mcu/bcm/8953x/src/bcm8953x_system.c        erika-sdk/pkg/mcu/bcm/common/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/mcu/bcm/common/src/bcm_timer.c             erika-sdk/pkg/mcu/bcm/common/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/mcu/bcm/common/src/cortex_rx_mpu.c         erika-sdk/pkg/mcu/bcm/common/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/mcu/bcm/common/src/cortex_rx_startup.S     erika-sdk/pkg/mcu/bcm/common/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/board/bcm/989530c1/src/ee_board.c          erika-sdk/pkg/board/bcm/989530c1/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/cpu/common/src/ee_hal_structs.c            erika-sdk/pkg/cpu/common/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/cpu/cortex_mx/src/ee_context.c             erika-sdk/pkg/cpu/cortex_mx/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/cpu/common/src/ee_context.c                erika-sdk/pkg/cpu/common/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/cpu/cortex_rx/src/ee_context.c             erika-sdk/pkg/cpu/cortex_rx/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/cpu/cortex_rx/src/ee_exceptions.c          erika-sdk/pkg/cpu/cortex_rx/src
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/cpu/cortex_rx/src/ee_gnu_oo.S              erika-sdk/pkg/cpu/cortex_rx/src
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/cpu/cortex_mx/src/ee_gnu_oo.S              erika-sdk/pkg/cpu/cortex_mx/src
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/cpu/cortex_mx/src/ee_gnu_multi_context.S   erika-sdk/pkg/cpu/cortex_mx/src
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/cpu/cortex_rx/src/ee_gnu_multi_context.S   erika-sdk/pkg/cpu/cortex_rx/src
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/pkg/kernel/oo/src/*                            erika-sdk/pkg/kernel/oo/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/contrib/bcm/utils/src/*                        erika-sdk/contrib/bcm/utils/src/
+cp ../BCM8953X_SDK_REL_3.1.1/Sources/BCM8953X_REL_3.1.1/erika-sdk/contrib/bcm/drivers/src/*.c                    erika-sdk/contrib/bcm/drivers/src
